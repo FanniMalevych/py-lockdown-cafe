@@ -11,7 +11,7 @@ def go_to_cafe(friends: list, cafe: Cafe) -> str:
         try:
             cafe.visit_cafe(friend)
         except VaccineError as e:
-            print("You have some issue", e)
+            print(f"Vaccine error for {friend['name']}: {e}")
             vaccine_error_msg.append(e)
         except NotWearingMaskError as e:
             print(e)
